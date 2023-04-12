@@ -131,3 +131,4 @@ dmypy.json
 # Private Data
 private_data/
 private_analysis/
+private_images/
