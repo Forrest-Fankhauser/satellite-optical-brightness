@@ -132,3 +132,6 @@ dmypy.json
 private_data/
 private_analysis/
 private_images/
+
+# CARs Downloads
+earthshine_brdf_fitting/cars_data/
