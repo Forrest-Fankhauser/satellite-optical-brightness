@@ -5,8 +5,8 @@ with open(download_file, 'r') as file:
     download_urls = file.read().splitlines()
 
 with requests.Session() as session:
-    
-    for i, URL in enumerate(download_urls[:2]):
+
+    for i, URL in enumerate(download_urls[::5]):
         result = session.get(URL)
         filename = "earthshine_brdf_fitting/cars_data/" + URL.split("/")[-1]
         try:

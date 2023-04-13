@@ -18,7 +18,7 @@ def binomial_fit(
 
     def model_func(*params):
         B, C, d = helper.pack_params(*params)
-        brdf = brdf_library.BINOMIAL(B, C, d, l1)
+        brdf = brdf_library.BINOMIAL(B, C, 0.3, l1)
         return brdf
 
     popt = lumos.brdf.fit_tools.fit_model(
@@ -32,12 +32,34 @@ def binomial_fit(
     fig = plt.figure()
     ax = fig.gca()
     brdf_plotter.plot1D(ax, model_func(*popt))
+    ax.set_title("Water BRDF")
     plt.show()
 
-binomial_fit(
-    "earthshine_brdf_fitting/processed_data/vegetation.csv",
-    1,
-    2,
-    -2,
-    2
-)
+def phong_fit(data_file):
+
+    def model_func(*params):
+        Kd, Ks, n = params
+        brdf = brdf_library.PHONG(Kd, Ks, n)
+        return brdf
+
+    popt = lumos.brdf.fit_tools.fit_model(
+        data_file,
+        model_func,
+        p0 = 1 * np.ones(3),
+        bounds = (0, 200))
+    
+    Kd, Ks, n = popt
+    print(f"{Kd = :0.3f}", f"{Ks = :0.3f}", f"{n = :0.3f}")
+
+    fig = plt.figure()
+    ax = fig.gca()
+    brdf_plotter.plot1D(ax, model_func(*popt), log_space = False)
+    ax.set_title("Water BRDF")
+    plt.show()
+
+    # fig = plt.figure()
+    # ax = plt.subplot(polar = True)
+    # brdf_plotter.plot2D(ax, model_func(*popt), 70)
+    # plt.show()
+
+phong_fit("earthshine_brdf_fitting/processed_data/vegetation.csv")

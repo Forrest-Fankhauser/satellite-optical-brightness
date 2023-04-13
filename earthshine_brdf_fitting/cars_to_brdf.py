@@ -13,7 +13,7 @@ SURFACES = {1 : 'snow',
             6 : 'barren',
             7 : 'mixed'}
 
-SAMPLES_PER_FILE = 50
+SAMPLES_PER_FILE = 500
 for surface in SURFACES.values():
     filename = f"earthshine_brdf_fitting/processed_data/{surface}.csv"
     with open(filename, 'w') as file:
