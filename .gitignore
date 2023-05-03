@@ -133,5 +133,8 @@ private_data/
 private_analysis/
 private_images/
 
+# Final Versions
+release_code/
+
 # CARs Downloads
 earthshine_brdf_fitting/cars_data/
