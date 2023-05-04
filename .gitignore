@@ -129,10 +129,7 @@ dmypy.json
 .pyre/
 
 # Private Data
-private_data/
-private_analysis/
-private_images/
-
+deprecated/
 # Final Versions
 release_code/
 
