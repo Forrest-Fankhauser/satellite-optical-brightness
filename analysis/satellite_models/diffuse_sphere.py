@@ -3,6 +3,9 @@ import lumos.conversions
 import lumos.constants
 import lumos.calculator
 
+# This code implements the diffuse sphere model for satellite brightness
+# Brightness is a function of solar phase angle and satellite range
+
 def get_intensity(area_albedo, sat_height, sat_alt, sat_az, sun_alt, sun_az):
 
     sat_x, sat_y, sat_z = lumos.conversions.altaz_to_unit(sat_alt, sat_az)

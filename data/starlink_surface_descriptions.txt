@@ -1,0 +1,14 @@
+The primary surfaces of the Starlink v1.5 configurations
+are the chassis underside (nadir) and the solar array.
+During the brightness regime of concern, the chassis normal
+points directly to geodetic nadir.
+This normal vector is N = (0, 0, -1) in the satellite-centered frame*.
+The solar array is perpendicular to the chassis and towards
+the sun.
+The normal vector is N = (0, 1, 0) in the satellite-centered frame*.
+
+The area of the solar array is 22.68 m^2.
+The area of the chassis nadir is 3.64 m^2.
+
+*See Satellite Optical Brightness (Fankhauser et. al 2023)
+for further descriptions.
