@@ -1,0 +1,3 @@
+ipykernel==6.23.1
+lumos-sat==1.0.9
+pandas==2.0.1
