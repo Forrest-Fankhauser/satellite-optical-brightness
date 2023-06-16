@@ -2,7 +2,7 @@
 Software for Satellite Optical Brightness (2023)
 by Forrest Fankhauser, Jacob Askari, and Tony Tyson.
 
-Link to Arxiv:
+Link to Arxiv: https://arxiv.org/abs/2305.11123
 
 ## Description
 This repository contains data and analysis needed to produce
